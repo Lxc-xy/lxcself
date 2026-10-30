@@ -31,7 +31,7 @@ async def ap2(ctx, *, message: str):
         count = 1
         try:
             while True:
-                await ctx.send(f"[{count}] {message}")
+                await ctx.send(f"{message} -# {count}")
                 count += 1
                 await asyncio.sleep(2)
         except asyncio.CancelledError:
@@ -64,7 +64,7 @@ async def gn(ctx, delay: float, *, name: str):
         count = 1
         try:
             while True:
-                await ctx.channel.edit(name=f"{name} {count}")
+                await ctx.channel.edit(name=f"{name} | {count}")
                 count += 1
                 await asyncio.sleep(delay)
         except asyncio.CancelledError:
