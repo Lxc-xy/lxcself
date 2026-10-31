@@ -142,6 +142,22 @@ async def banner(ctx, user: discord.User):
     except Exception as e:
         await ctx.send(f"An error occurred: {e}")
 
+@lxc.command()
+async def avatar(ctx, user: discord.User = None):
+    try:
+        if user is None:
+            user = lxc.user
+
+        if user.display_avatar:
+            avatar_url = user.display_avatar.url
+            await ctx.send(f'```{user.display_name}'s avatar:```\n[Lxc Sb]({avatar_url})')
+        else:
+            await ctx.send(f'{user.name} does not have an avatar.', delete_after=5)
+
+        await ctx.message.delete()
+    except Exception as e:
+        await ctx.send(f'An error occurred: {e}', delete_after=10)
+        
 
 @lxc.command()
 async def ipinfo(ctx, ip: str):
