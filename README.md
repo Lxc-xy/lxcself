@@ -1,8 +1,9 @@
-# Warning
+# Disclaimer
 
-Use at your own risk. No selfbot can guarantee that your main ID will be safe. This breaks Discord TOS. The owner will hold no liability if your ID gets disabled/termed. Please proceed with caution.
+Use this software entirely at your own discretion and risk. No selfbot can warrant the absolute safety or integrity of your primary Discord account. Please be advised that operating a selfbot constitutes a violation of Discord's Terms of Service and may result in account suspension or permanent termination. The owner assumes no responsibility or liability for any restrictions, disabling, or termination imposed upon your account. By proceeding, you acknowledge and accept all associated risks.
 
 
 # Requirements
 
-pip install discord.py-self
+
+pip install discord.py-self tls_client
